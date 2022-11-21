@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Styles.css">
+    <title>Putting User Input into JS Objects</title>
+</head>
+<body>
+    <form>
+        <div class = "border">
+        <div class="form">
+            <label for="title">Movie</label>
+            <input type="text" id="title" placeholder="Title"/>
+        </div>
+        <div class="form">
+            <label for="year">Year</label>
+            <input type="number" id="year" placeholder="Year"/>
+        </div>
+        <div class="form">
+            <button id="btn">Add Movie</button>
+        </div>
+        <div id="msg">
+            <pre></pre>
+        </div>
+        </div>
+    </form>
+    <script>
+        let movies = [];
+        const addMovie = (ev)=>{
+            ev.preventDefault();  //to stop the form submitting
+            let movie = {
+                title: document.getElementById('title').value,
+                year: document.getElementById('year').value
+            }
+            movies.push(movie);
+            document.forms[0].reset(); // to clear the form for the next entries
+
+            //for display purposes only
+            console.warn('added' , {movies} );
+            let pre = document.querySelector('#msg pre');
+            pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
+
+            //saving to localStorage
+            localStorage.setItem('MyMovieList', JSON.stringify(movies) );
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('btn').addEventListener('click', addMovie);
+        });
+    </script>
+</body>
+</html>

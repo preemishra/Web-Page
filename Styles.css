@@ -10,12 +10,12 @@ form {
 }
 .border{
     border: #8a067f solid 5px;
+    padding: 2em;
 } 
 .container {
     display: flex;
     flex-direction: column;
     width: 25vw;
-    
 }
   
 h1, p {
