@@ -54,22 +54,44 @@
             flex-direction: column;
             justify-content: center;
         }
+
+        .movies {
+            background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+            background-size: cover;
+            height: 100vh;
+            padding:0;
+            margin:0;
+            text-align: center;
+            
+        }
   </style>
 </head>
 <body>
   <nav class="navbar background">
       <ul class="nav-list">
-<<<<<<< HEAD
-          <li><a href="home.html">Home</a></li>
-          <li><a href="addMovie.html">Add/Edit</a></li>
-=======
-          
           <li><a href="login.html">Home</a></li>
           <li><a href="addMovie.html">Add Movie</a></li>
->>>>>>> b7095c86a9e824e6b91fd414f0e38ae05a9ce774
           <li><a href="about.html">About Us</a></li>
           <li><a href ="login.html">Sign Out</a></li>
      </ul>
   </nav>
+
+  <div class="movies">
+  <div id="id01"></div>
+        <script>
+            function movieList(arr) {
+                var out = "";
+                var i;
+                for(i = 0; i<arr.length; i++) {
+                    out += '<a href="' + arr[i].url + '">' + 
+                    arr[i].title + '</a><br>';
+                }
+                document.getElementById("id01").innerHTML = out;
+            }
+        </script>
+    
+        <script src="movieListFunction.js"></script>
+    </div>
+
 </body>
 </html>
