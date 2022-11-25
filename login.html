@@ -6,7 +6,7 @@
 <style>
     
 </style>
-
+<script src="./login.js"></script>
 </head>
 <body>
 
@@ -16,18 +16,20 @@
      <div class ="border">
     <h2 >Login Form</h2>
   <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label><b>Username</b></label><br>
+    <input type="text" placeholder="Enter Username" name="uname" id="uname" required/>
+     <br>
+    <label><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required/>
+    <br>
         
-    <button type="submit">Login</button>
+    <input type="submit" value ="Submit" onclick="addData()">
    
   </div>
 <span class="lnk">Don't have a account ?<a href="Registration.html">Register Now</a></span>
   
 </div>
 </form>
+
 </body>
 </html>
