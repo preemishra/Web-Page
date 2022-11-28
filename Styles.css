@@ -1,6 +1,7 @@
 /* font family is added */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background:url(img.jpg)no-repeat;
 }
   
 form {

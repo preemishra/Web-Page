@@ -1,0 +1,33 @@
+
+[
+    { 
+        "poster":"kantara.jpg",
+        "name":"Kantara",
+        "description":"abc",
+        "year":"123"
+    },
+    { 
+        "poster":"radhe.jpg",
+        "name":"Radhe",
+        "description":"abc",
+        "year":"123"
+    },
+    { 
+        "poster":"thank-god.jpg",
+        "name":"Thank God",
+        "description":"abc",
+        "year":"123"
+    },
+    { 
+        "poster":"tanhaji.jpg",
+        "name":"Tanhaji",
+        "description":"abc",
+        "year":"123"
+    },
+    { 
+        "poster":"adipurush.jpg",
+        "name":"Adipurush",
+        "description":"abc",
+        "year":"123"
+    }
+]

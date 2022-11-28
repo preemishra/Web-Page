@@ -6,18 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./Styles.css">
         <title>Register</title>
+      
     </head>    
 <body>
-    <form>
+    <form action="home.html">
       <div class="border">
       <div class="container">
           <h1>Register</h1>
           <p>Kindly fill this form to register.</p>
           <label for="username"><b>Username</b></label>
-          <input type="text" placeholder="Enter username" name="username" id="username" required/>
+          <input type="text" placeholder="Enter username"  pattern="[A-Za-z]{6}[0-9]{1}" maxlength="8" name="username" id="username" required/>
   
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" id="email" required/>
+          <input type="email" placeholder="Enter Email" name="email" id="email" required/>
 
           <label for="pwd"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required/>
@@ -25,7 +26,8 @@
           <label for="pwd-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="pwd-repeat" id="pwd-repeat" required/>
           <!-- submit button -->
-          <button type="submit"><a href="C:\Users\Anuradha.Oman\Desktop\Movie Project\Web-Page\home.html"></a>Register</button>
+          <button type="submit" value="submit" onclick="addData();return Validate()">Register</button>
+          
         </div>
         <!-- the # must ideally be replaced by the login page URL -->
         <div>
@@ -33,5 +35,18 @@
         </div>
         </div>
     </form>
+    <script src="./registration.js"></script>
+    <script type="text/javascript">
+      function Validate() {
+          var password = document.getElementById("pwd").value;
+          var confirmPassword = document.getElementById("pwd-repeat").value;
+          if (password != confirmPassword) {
+              alert("Passwords do not match.");
+              return false;
+          }
+          return true;
+      }
+      
+  </script>
 </body>
 </html>
