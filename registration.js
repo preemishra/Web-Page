@@ -6,15 +6,15 @@ function addData(){
     
     
 
-    let a = localStorage.setItem(uname,"uname");
-    console.log( a);
-    let b= localStorage.setItem(email,"email");
-    console.log(b);
+    let a1 = localStorage.setItem(uname,"uname");
+    console.log( a1);
+    let b1= localStorage.setItem(email,"email");
+    console.log(b1);
 
-    let c = localStorage.setItem(psw,"psw");
-    console.log(c);
-    let d= localStorage.setItem(pwd,"pwd");
-    console.log(d);
+    let c1 = localStorage.setItem(psw,"psw");
+    console.log(c1);
+    let d1= localStorage.setItem(pwd,"pwd");
+    console.log(d1);
    // localStorage.setItem("pwd",pass);
     /*localStorage.uname=username;
     localStorage.psw=pass;*/
